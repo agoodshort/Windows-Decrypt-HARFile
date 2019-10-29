@@ -11,6 +11,7 @@ The output might be different depending on the browser and the authentification 
 
 The script will parse the HAR file to find the SAMLResponse.
 This SAMLResponse will then be decrypted using Base64.
+
 The script will generate a decrypted XML file on your desktop. 
 
 ### Prerequisites
