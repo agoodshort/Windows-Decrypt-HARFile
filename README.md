@@ -1,5 +1,6 @@
 # Windows-Decrypt-HARFile
-Simple PowerShell script to decrypt a HAR file and get the SAML assertion
+Simple PowerShell script to decrypt a HAR file and retrieve a SAML assertion from it.
+Best to be used with HAR file generated following these [steps](https://www.mathworks.com/matlabcentral/answers/506015).
 
 ## Getting Started
 
@@ -7,7 +8,14 @@ Please read through the steps below before running the PowerShell script.
 
 The output might be different depending on the browser and the authentification used to generate the HAR file. This script might not work depending on these conditions.
 
-### What will happen
+### Why to use this script?
+
+At MathWorks we sometimes face some issues that requires a SAML assertion.
+As we do not have any tools that a customer could use to retrieve a SAML assertion, we decided to write down this [article](https://www.mathworks.com/matlabcentral/answers/506015) and to retrieve customers' SAML assertions via a HAR file.
+By this way, our customers do not need to install thrid party apps.
+This powershell script is to be used to retrieve the SAML assertion from the HAR file.
+
+### What does this script do?
 
 The script will parse the HAR file to find the SAMLResponse.
 This SAMLResponse will then be decrypted using Base64.
@@ -17,7 +25,7 @@ The script will generate a decrypted XML file on your desktop.
 ### Prerequisites
 
 Generate a HAR file while reproducing the issue you want to troubleshoot.
-Find steps to generate a HAR file on this [page](https://www.qualtrics.com/support/survey-platform/sp-administration/brand-customization-services/sso/generating-a-har-file/).
+Some basic understanding of what you are trying to achieve.
 
 ### Usage
 
@@ -31,12 +39,12 @@ git clone "https://github.com/goodshort/Windows-Decrypt-HARFile.git"
    - From a Command Prompt
 
    ```
-   cd <script-location>
+   cd Windows-Decrypt-HARFile
    powershell.exe .\Decrypt-HARFile.ps1 <path-to-HAR-file>
    ```
 
-   - From the GUI
-     - Browse to the script location via your File Explorer
+   - From your Windows File Explorer
+      - Browse to the script location via your File Explorer
      - Right click on "Decrypt-HARFile.ps1" > "Run with PowerShell"
      - You will be prompted to select the HAR file you wish to decrypt
    
