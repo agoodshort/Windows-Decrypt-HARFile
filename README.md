@@ -51,10 +51,6 @@ git clone "https://github.com/goodshort/Windows-Decrypt-HARFile.git"
 
 3. The XML output will be saved on your Desktop
 
-## Authors
-
-* **Adrien Biencourt** - *Initial work* - [goodshort](https://github.com/goodshort)
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
