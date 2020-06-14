@@ -2,6 +2,10 @@
 Simple PowerShell script to decrypt a HAR file and retrieve a SAML assertion from it.
 Best to be used with HAR file generated following these [steps](https://www.mathworks.com/matlabcentral/answers/506015).
 
+## End-of-Life June 2020
+This powershell script has reached its end of life. The concept has now been implemented in a MATLAB Web App.
+At this time, the repository has been archived, and is read-only.
+
 ## Getting Started
 
 Please read through the steps below before running the PowerShell script.
@@ -10,7 +14,7 @@ The output might be different depending on the browser and the authentification 
 
 ### Why to use this script?
 
-At MathWorks we sometimes face some issues that requires a SAML assertion.
+At MathWorks we sometimes face some issues that requires a SAML assertion from customers.
 As we do not have any tools that a customer could use to retrieve a SAML assertion, we decided to write down this [article](https://www.mathworks.com/matlabcentral/answers/506015) and to retrieve customers' SAML assertions via a HAR file.
 By this way, our customers do not need to install thrid party apps.
 This powershell script is to be used to retrieve the SAML assertion from the HAR file.
@@ -45,7 +49,7 @@ git clone "https://github.com/goodshort/Windows-Decrypt-HARFile.git"
 
    - From your Windows File Explorer
       - Browse to the script location via your File Explorer
-     - Right click on "Decrypt-HARFile.ps1" > "Run with PowerShell"
+     - Right click on `Decrypt-HARFile.ps1` > `Run with PowerShell`
      - You will be prompted to select the HAR file you wish to decrypt
    
 
